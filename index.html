@@ -537,13 +537,13 @@ footer small{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;}
     <div class="shade"></div>
     <div class="wrap inner">
       <div class="hud mono"><span>Truck <b>#14</b></span><span>Dallas → Atlanta</span><span>Status <b class="red" id="hudStatus">Rate $1.46/mi</b></span></div>
-      <div class="clock xb" aria-label="Rate per mile, deadhead miles, hours waiting, no clear updates"><span id="clockMin" style="white-space:nowrap">$1.46</span><span class="ap" id="clockUnit">/mi</span></div>
+      <div class="clock xb" aria-label="Rate per mile, deadhead miles, hours waiting, no updates"><span id="clockMin" style="white-space:nowrap">$1.46</span><span class="ap" id="clockUnit">/mi</span></div>
       <div class="storylines cb" id="storyLines">
         <div class="sl on">Cheap loads.</div>
         <div class="sl">Deadhead.</div>
         <div class="sl">Trucks waiting <br class="mbr">for loads.</div>
         <div class="sl red">You pay for all of it.</div>
-        <div class="sl">And still no <br class="mbr">clear updates.</div>
+        <div class="sl">Ask why? <br class="mbr">No straight answer.</div>
       </div>
     </div>
     <div class="slab k" id="slabK"></div>
@@ -1113,6 +1113,19 @@ if (FINE && !RM) {
 const hdr = $('#hdr'), mbar = $('#mbar'), heroBg = $('#heroBg'), h1 = $('#h1'), bands = $('#bands');
 const story = $('#story'), nightVid = $('#nightVid'), slabR = $('#slabR'), slabK = $('#slabK'), slabW = $('#slabW');
 const slines = $$('#storyLines .sl'), clockMin = $('#clockMin'), hudStatus = $('#hudStatus');
+/* keep every story line on one row on wide screens: shrink a line only if it would overflow */
+function fitStory(){
+  const box = $('#storyLines'); if (!box) return;
+  const avail = box.clientWidth - 2;
+  slines.forEach(sl => {
+    sl.style.fontSize = '';
+    if (getComputedStyle(sl).whiteSpace !== 'nowrap') return;
+    const r = document.createRange(); r.selectNodeContents(sl);
+    const w = r.getBoundingClientRect().width;
+    if (w > avail) sl.style.fontSize = (parseFloat(getComputedStyle(sl).fontSize) * avail / w) + 'px';
+  });
+}
+fitStory(); addEventListener('resize', fitStory); if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitStory);
 const STATUS = ['Rate $1.46/mi', 'Deadhead 312 mi', 'Waiting 14 hrs', 'Losing money', 'Unknown'];
 const BIGN = ['$1.46', '312', '14', '−$$$', '?'], BIGU = ['/mi', 'mi', 'hrs', '', 'no update'];
 const dividers = $$('.divider'), divSlabs = dividers.map(d => $$('.s', d)), phone = $('#phone'), phoneStage = $('#phoneStage'), big = $('#big3 .n');
