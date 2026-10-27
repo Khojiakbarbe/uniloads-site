@@ -154,7 +154,7 @@ section[id]{scroll-margin-top:var(--hdr);}
 .divider .s1{background:var(--red);} .divider .s2{background:var(--ink);} .divider .s3{background:var(--from,var(--asphalt));}
 
 /* ---------- 2 AM story (sticky) ---------- */
-.story{position:relative;height:330vh;background:var(--ink);}
+.story{position:relative;height:380vh;background:var(--ink);}
 .story .stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;isolation:isolate;}
 .story video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:filter .2s;}
 .story .shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,14,16,.86),rgba(13,14,16,.35) 40%,rgba(13,14,16,.88));}
@@ -537,12 +537,13 @@ footer small{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;}
     <div class="shade"></div>
     <div class="wrap inner">
       <div class="hud mono"><span>Truck <b>#14</b></span><span>Dallas → Atlanta</span><span>Status <b class="red" id="hudStatus">Rate $1.46/mi</b></span></div>
-      <div class="clock xb" aria-label="Rate per mile, deadhead miles, hours waiting"><span id="clockMin" style="white-space:nowrap">$1.46</span><span class="ap" id="clockUnit">/mi</span></div>
+      <div class="clock xb" aria-label="Rate per mile, deadhead miles, hours waiting, no clear updates"><span id="clockMin" style="white-space:nowrap">$1.46</span><span class="ap" id="clockUnit">/mi</span></div>
       <div class="storylines cb" id="storyLines">
         <div class="sl on">Cheap loads.</div>
         <div class="sl">Deadhead.</div>
         <div class="sl">Trucks waiting <br class="mbr">for loads.</div>
         <div class="sl red">You pay for all of it.</div>
+        <div class="sl">And still no <br class="mbr">clear updates.</div>
       </div>
     </div>
     <div class="slab k" id="slabK"></div>
@@ -1112,8 +1113,8 @@ if (FINE && !RM) {
 const hdr = $('#hdr'), mbar = $('#mbar'), heroBg = $('#heroBg'), h1 = $('#h1'), bands = $('#bands');
 const story = $('#story'), nightVid = $('#nightVid'), slabR = $('#slabR'), slabK = $('#slabK'), slabW = $('#slabW');
 const slines = $$('#storyLines .sl'), clockMin = $('#clockMin'), hudStatus = $('#hudStatus');
-const STATUS = ['Rate $1.46/mi', 'Deadhead 312 mi', 'Waiting 14 hrs', 'Losing money'];
-const BIGN = ['$1.46', '312', '14', '−$$$'], BIGU = ['/mi', 'mi', 'hrs', ''];
+const STATUS = ['Rate $1.46/mi', 'Deadhead 312 mi', 'Waiting 14 hrs', 'Losing money', 'Unknown'];
+const BIGN = ['$1.46', '312', '14', '−$$$', '?'], BIGU = ['/mi', 'mi', 'hrs', '', 'no update'];
 const dividers = $$('.divider'), divSlabs = dividers.map(d => $$('.s', d)), phone = $('#phone'), phoneStage = $('#phoneStage'), big = $('#big3 .n');
 let lastY = scrollY, vel = 0, skew = 0, stopShaken = false, ticking = false, lastLine = -1;
 function prog(el){ const r = el.getBoundingClientRect(); return clamp(-r.top / Math.max(1, el.offsetHeight - innerHeight)); }
@@ -1148,20 +1149,20 @@ function frame(){
   // 2 AM story
   const sp = prog(story);
   if (!RM) {
-    const li = sp < .52 ? Math.min(3, Math.floor(sp / .13)) : 3;
+    const li = sp < .56 ? Math.min(4, Math.floor(sp / .112)) : 4;
     if (li !== lastLine) {
       slines.forEach((s, k) => { s.classList.toggle('on', k === li); s.classList.toggle('gone', k < li); });
       hudStatus.textContent = STATUS[li]; lastLine = li;
       clockMin.textContent = BIGN[li]; $('#clockUnit').textContent = BIGU[li]; $('#clockUnit').style.display = BIGU[li] ? '' : 'none';
     }
-    const rP = easeOut(clamp((sp - .55) / .1));
-    slabK.style.transform = `translateX(${lerp(-115, 0, easeOut(clamp((sp - .53) / .1)))}%) skewX(-12deg)`;
+    const rP = easeOut(clamp((sp - .59) / .1));
+    slabK.style.transform = `translateX(${lerp(-115, 0, easeOut(clamp((sp - .57) / .1)))}%) skewX(-12deg)`;
     slabR.style.transform = `translateX(${lerp(-115, 0, rP)}%) skewX(-12deg)`;
     const stopTxt = slabR.querySelector('.xb');
     stopTxt.style.transform = `scale(${lerp(2.2, 1, rP)})`; stopTxt.style.filter = `blur(${lerp(14, 0, rP)}px)`;
     if (rP >= 1 && !stopShaken) { stopShaken = true; story.querySelector('.stick').animate([{transform:'translate(0,0)'},{transform:'translate(-14px,8px)'},{transform:'translate(12px,-9px)'},{transform:'translate(-8px,5px)'},{transform:'translate(5px,-3px)'},{transform:'none'}], {duration: 380}); }
     if (rP < .5) stopShaken = false;
-    const wP = easeOut(clamp((sp - .78) / .12));
+    const wP = easeOut(clamp((sp - .80) / .12));
     slabW.style.transform = `translateX(${lerp(115, 0, wP)}%) skewX(-12deg)`;
     nightVid.style.filter = `grayscale(${clamp((sp - .3) / .3)}) brightness(${1 - clamp((sp - .3)/.3)*.35})`;
   }
