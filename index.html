@@ -11,14 +11,14 @@
 <meta property="og:site_name" content="UNILoads">
 <meta property="og:url" content="https://uniloads.net/">
 <meta property="og:title" content="UNILoads | 24/7 Truck Dispatch">
-<meta property="og:description" content="One manager for your company, a full dispatch team for your trucks. 4% of gross.">
+<meta property="og:description" content="One manager for your company, a full dispatch team for your trucks. No rate cuts, no long contract.">
 <meta property="og:image" content="https://uniloads.net/media/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"UNILoads","url":"https://uniloads.net/","email":"dispatch@uniloads.net","telephone":"+1-628-333-3103","contactPoint":{"@type":"ContactPoint","telephone":"+1-628-333-3103","contactType":"sales","areaServed":"US","availableLanguage":"English"}}</script>
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
-<meta name="description" content="UNILoads: 24/7 truck dispatch for power-only, dry van and reefer carriers. One manager for your company, a dispatch team for your trucks. Dispatch fee 4% of gross.">
+<meta name="description" content="UNILoads: 24/7 truck dispatch for power-only, dry van and reefer carriers. One manager for your company, a dispatch team for your trucks. No rate cuts, no long contract.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
@@ -300,47 +300,25 @@ section[id]{scroll-margin-top:var(--hdr);}
 }
 @media (max-width:900px) and (max-height:600px){.rowi .ds{display:none;}}
 
-/* ---------- price ---------- */
-.price{position:relative;overflow:clip;}
-.price .stripes{position:absolute;inset:0;pointer-events:none;}
-.price .stripes i{position:absolute;left:-20%;width:140%;transform:rotate(-11deg);}
-.price .stripes .p1{top:16%;height:230px;background:#E3E2DE;}
-.price .stripes .p2{top:calc(16% + 252px);height:8px;background:var(--ink);}
-.price .stripes .p3{top:calc(16% + 274px);height:20px;background:var(--red);}
-.price-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:50px;align-items:center;}
-@media (max-width:980px){.price-grid{grid-template-columns:minmax(0,1fr);}}
-.big3{perspective:1000px;}
-.big3 .n{position:relative;font-family:var(--f-display);font-weight:900;font-stretch:125%;font-style:italic;font-size:clamp(150px,min(30vw,50vh),400px);line-height:.82;letter-spacing:-.05em;display:inline-flex;transform-style:preserve-3d;will-change:transform;}
-.big3 .reelbox{display:inline-block;height:.86em;overflow:hidden;vertical-align:top;position:relative;}
-.big3 .reel{display:flex;flex-direction:column;transform:translateY(-83.333%);}
-.big3 .reel span{height:.86em;line-height:.86em;display:block;}
-.big3 .n .lay{position:relative;color:var(--red);display:inline-flex;}
-.big3 .n .shadow1,.big3 .n .shadow2{position:absolute;left:0;top:0;display:inline-flex;pointer-events:none;}
-.big3 .n .shadow1{color:var(--ink);transform:translate3d(.04em,.035em,-40px);}
-.big3 .n .shadow2{color:transparent;-webkit-text-stroke:4px var(--ink);transform:translate3d(.085em,.075em,-80px);opacity:.9;}
-.feelabel{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:10px;}
-.feelabel .xb{font-size:clamp(30px,4vw,54px);}
-.feelabel .of{font-family:var(--f-mono);font-size:14px;letter-spacing:.14em;text-transform:uppercase;padding:8px 12px;background:var(--ink);color:var(--white);}
-.points{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:0;background:var(--paper);position:relative;}
-.points li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;padding:14px 0;border-top:2px solid var(--ink);font-weight:600;font-size:18px;line-height:1.35;}
-.points li:last-child{border-bottom:2px solid var(--ink);}
-.points li i{width:26px;height:26px;background:var(--red);display:grid;place-items:center;}
-.calc{background:var(--ink);color:var(--white);padding:28px;display:grid;gap:20px;position:relative;box-shadow:18px 18px 0 var(--red);}
-.calc h3{font-size:clamp(26px,2.6vw,36px);}
-.field{display:grid;gap:8px;}
-.field .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;}
-.field label{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel-2);}
-.field output{font-family:var(--f-display);font-weight:900;font-stretch:110%;font-size:24px;font-variant-numeric:tabular-nums;}
-input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;background:linear-gradient(90deg,var(--red) var(--p,50%),#3A3C42 var(--p,50%));border-radius:3px;outline-offset:6px;}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--white);border:5px solid var(--red);cursor:grab;box-shadow:0 2px 8px rgba(0,0,0,.4);}
-input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--white);border:5px solid var(--red);cursor:grab;}
-.res{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
-.res div{background:var(--asphalt-2);padding:14px;display:grid;gap:4px;}
-.res .k{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--steel-2);}
-.res .v{font-family:var(--f-display);font-weight:900;font-stretch:110%;font-size:clamp(22px,2.4vw,30px);font-variant-numeric:tabular-nums;}
-.res .save{grid-column:1/-1;background:var(--red);}
-.res .save .k{color:rgba(255,255,255,.85);}
-.calc .note{font-size:13px;color:var(--steel-2);}
+/* ---------- why owners switch ---------- */
+.why{position:relative;overflow:clip;}
+.reasons{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+@media (max-width:980px){.reasons{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:620px){.reasons{grid-template-columns:minmax(0,1fr);gap:10px;}}
+.rz{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-rows:auto 1fr;gap:6px 16px;align-items:start;background:var(--white);color:var(--ink);border:1px solid var(--line);border-top:6px solid var(--ink);padding:18px 18px 20px;}
+.rz .rn{grid-row:1/3;font-family:var(--f-display);font-weight:900;font-stretch:125%;font-style:italic;font-size:clamp(44px,4.4vw,62px);line-height:.82;letter-spacing:-.04em;color:var(--red);min-width:1.45em;}
+.rz h3{font-size:clamp(22px,2vw,28px);line-height:.98;}
+.rz p{font-size:15px;line-height:1.4;opacity:.75;}
+.rz.hot{background:var(--ink);color:var(--white);border-color:var(--ink);border-top-color:var(--red);}
+.rz.hot p{opacity:.85;}
+.norc{margin-top:clamp(28px,4vw,48px);background:var(--ink);color:var(--white);padding:clamp(24px,4vw,44px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:18px 40px;align-items:center;box-shadow:14px 14px 0 var(--red);}
+@media (max-width:860px){.norc{grid-template-columns:minmax(0,1fr);box-shadow:10px 10px 0 var(--red);}}
+.norc .xb{font-size:clamp(46px,6.4vw,96px);}
+.norc .xb span{color:var(--red);}
+.norc p{font-size:clamp(16px,1.5vw,19px);line-height:1.5;color:#E7E8EA;max-width:36em;}
+.norc .stop{margin-top:16px;display:inline-block;font-family:var(--f-mono);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:14px;line-height:1.35;background:var(--red);color:var(--white);padding:10px 14px;}
+.pricing-note{margin-top:clamp(30px,4vw,44px);font-size:17px;line-height:1.5;max-width:46em;}
+.pricing-note b{font-weight:800;}
 
 /* ---------- add-ons ---------- */
 .addons{position:relative;margin-top:clamp(56px,7vw,96px);display:grid;gap:22px;}
@@ -478,7 +456,7 @@ footer .fcontact a:hover{text-decoration:underline;text-underline-offset:3px;}
     <nav class="nav" aria-label="Main">
       <a class="navlink" href="#how">How it works</a>
       <a class="navlink" href="#services">Services</a>
-      <a class="navlink" href="#price">Price</a>
+      <a class="navlink" href="#why">Why us</a>
       <a class="navlink" href="#faq">FAQ</a>
       <a class="hdrtel" href="tel:+16283333103" aria-label="Call UNILoads at (628) 333-3103"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span><span class="num">(628) 333-3103</span></a>
       <button class="btn sm js-msg magnetic" type="button">
@@ -509,7 +487,7 @@ footer .fcontact a:hover{text-decoration:underline;text-underline-offset:3px;}
         </div>
       </div>
       <div>
-        <p class="hero-sub"><b>One manager who knows your company</b>, <b>a full dispatch team</b> behind them, and straight answers day or night. Loads, rates, check calls, paperwork and performance disputes, handled. Dispatch fee: 4% of gross.</p>
+        <p class="hero-sub"><b>One manager who knows your company</b>, <b>a full dispatch team</b> behind them, and straight answers day or night. Loads, rates, check calls, paperwork and your performance score, handled. No rate cuts, no long contract.</p>
         <div class="hero-cta">
           <button class="btn js-msg magnetic pulse" type="button">
             <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 4h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H9l-5 4v-4H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/></svg>
@@ -517,7 +495,7 @@ footer .fcontact a:hover{text-decoration:underline;text-underline-offset:3px;}
           </button>
           <a class="btn ghost magnetic" href="#watch">
             <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 4l13 8-13 8z"/></svg>
-            Watch the 30-sec ad
+            Watch the ad
           </a>
         </div>
       </div>
@@ -529,7 +507,7 @@ footer .fcontact a:hover{text-decoration:underline;text-underline-offset:3px;}
           <span class="k">Coverage</span><span class="v">24/7 team</span>
           <span class="k">Report</span><span class="v">Weekly numbers</span>
           <span class="k">Contract</span><span class="v">No long contract</span>
-          <span class="k">Dispatch fee</span><span class="v">4% of gross</span>
+          <span class="k">Rate cuts</span><span class="v red">None</span>
           <span class="sep"></span>
           <span class="k">Central time</span><span class="v mono" id="ctTime" style="font-size:18px;font-family:var(--f-mono)">--:--</span>
         </div>
@@ -542,12 +520,12 @@ footer .fcontact a:hover{text-decoration:underline;text-underline-offset:3px;}
 <!-- ======================= BANDS ======================= -->
 <div class="bands" id="bands" aria-hidden="true">
   <div class="band b1"><div class="track">
-    <span>Straight from brokers</span><span>Power only</span><span>53' dry van</span><span>Reefer</span><span>Broker freight</span><span>Check calls 24/7</span><span>Disputes handled</span>
-    <span>Straight from brokers</span><span>Power only</span><span>53' dry van</span><span>Reefer</span><span>Broker freight</span><span>Check calls 24/7</span><span>Disputes handled</span>
+    <span>Straight from brokers</span><span>Power only</span><span>53' dry van</span><span>Reefer</span><span>Broker freight</span><span>Check calls 24/7</span><span>High performance score</span>
+    <span>Straight from brokers</span><span>Power only</span><span>53' dry van</span><span>Reefer</span><span>Broker freight</span><span>Check calls 24/7</span><span>High performance score</span>
   </div></div>
   <div class="band b2"><div class="track">
-    <span>One manager per company</span><span>Full dispatch team</span><span>Weekly report</span><span>Safety · fleet · accounting</span><span>No long contract</span><span>Day and night</span>
-    <span>One manager per company</span><span>Full dispatch team</span><span>Weekly report</span><span>Safety · fleet · accounting</span><span>No long contract</span><span>Day and night</span>
+    <span>One manager per company</span><span>Full dispatch team</span><span>Weekly report</span><span>Safety · fleet · accounting</span><span>No long contract</span><span>No rate cuts</span>
+    <span>One manager per company</span><span>Full dispatch team</span><span>Weekly report</span><span>Safety · fleet · accounting</span><span>No long contract</span><span>No rate cuts</span>
   </div></div>
 </div>
 
@@ -666,7 +644,7 @@ footer .fcontact a:hover{text-decoration:underline;text-underline-offset:3px;}
           <div class="rowi" data-i="1"><span class="bg"></span><span class="n">02</span><span class="tt">Better loads from brokers</span><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" stroke="#fff" stroke-width="3.4" fill="none"/></svg></span><span class="ds">We see a load on the board, call the broker and push for more than the posted rate.</span></div>
           <div class="rowi" data-i="2"><span class="bg"></span><span class="n">03</span><span class="tt">Broker setup & paperwork</span><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" stroke="#fff" stroke-width="3.4" fill="none"/></svg></span><span class="ds">Carrier packets, rate confirmations, BOLs and PODs, handled.</span></div>
           <div class="rowi" data-i="3"><span class="bg"></span><span class="n">04</span><span class="tt">24/7 tracking & check calls</span><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" stroke="#fff" stroke-width="3.4" fill="none"/></svg></span><span class="ds">Drivers reach a dispatcher any hour, and we stay on every load, so nothing surprises you.</span></div>
-          <div class="rowi" data-i="4"><span class="bg"></span><span class="n">05</span><span class="tt">Performance & disputes</span><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" stroke="#fff" stroke-width="3.4" fill="none"/></svg></span><span class="ds">We protect your performance score and file disputes when a load gets marked unfairly.</span></div>
+          <div class="rowi" data-i="4"><span class="bg"></span><span class="n">05</span><span class="tt">High performance score</span><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" stroke="#fff" stroke-width="3.4" fill="none"/></svg></span><span class="ds">We keep your performance score high and file disputes when a load gets marked unfairly.</span></div>
           <div class="rowmore">+ and more</div>
         </div>
       </div>
@@ -678,44 +656,35 @@ footer .fcontact a:hover{text-decoration:underline;text-underline-offset:3px;}
 <!-- side wipe: paper -> paper(price) -->
 <div class="divider" style="--from:var(--paper);--to:var(--paper)" aria-hidden="true"><i class="s s3"></i><i class="s s2"></i><i class="s s1"></i></div>
 
-<!-- ======================= PRICE ======================= -->
-<section class="sec paper price" id="price">
-  <div class="stripes" aria-hidden="true"><i class="p1"></i><i class="p2"></i><i class="p3"></i></div>
-  <div class="wrap price-grid">
-    <div>
-      <div class="eyebrow">Price</div>
-      <div class="big3 tilt3" id="big3" style="margin-top:18px">
-        <div class="n" aria-label="4 percent">
-          <span class="shadow2" aria-hidden="true">4%</span>
-          <span class="shadow1" aria-hidden="true">4%</span>
-          <span class="lay" aria-hidden="true"><span class="reelbox"><span class="reel" id="reel"><span>9</span><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span></span></span>%</span>
-        </div>
-      </div>
-      <div class="feelabel"><span class="xb">Dispatch fee</span><span class="of">of gross</span></div>
-      <ul class="points">
-        <li><i><svg width="14" height="14" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" stroke="#fff" stroke-width="3.6" fill="none"/></svg></i>Your manager, the dispatch team, paperwork and check calls are all included in the 4%.</li>
-        <li><i><svg width="14" height="14" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" stroke="#fff" stroke-width="3.6" fill="none"/></svg></i>No long contract.</li>
-        <li><i><svg width="14" height="14" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" stroke="#fff" stroke-width="3.6" fill="none"/></svg></i>Weekly report: gross, rate per mile, deadhead miles.</li>
-      </ul>
+<!-- ======================= WHY OWNERS SWITCH ======================= -->
+<section class="sec paper why" id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Why owners switch</div>
+      <h2 class="h2 xb split">12 reasons owners <span class="red">switch to us.</span></h2>
     </div>
-    <div class="calc reveal" id="calc">
-      <div class="eyebrow" style="color:var(--white)">Clear pricing</div>
-      <h3 class="cb">What 4% looks like for your trucks</h3>
-      <div class="field">
-        <div class="top"><label for="trucks">Trucks</label><output id="oTrucks">15</output></div>
-        <input type="range" id="trucks" min="1" max="60" step="1" value="15">
+    <ol class="reasons" id="reasons">
+      <li class="rz"><span class="rn" aria-hidden="true">01</span><h3 class="cb">Rates we actually fight for</h3><p>We call the broker and push for more on every load, not just book the posted rate.</p></li>
+      <li class="rz"><span class="rn" aria-hidden="true">02</span><h3 class="cb">Less deadhead</h3><p>Your next load is lined up before the truck delivers.</p></li>
+      <li class="rz"><span class="rn" aria-hidden="true">03</span><h3 class="cb">Strong broker network</h3><p>Brokers we already work with, so setups are fast and the freight is better.</p></li>
+      <li class="rz hot"><span class="rn" aria-hidden="true">04</span><h3 class="cb">No rate cuts</h3><p>Every rate con is the real one, for you and for your drivers.</p></li>
+      <li class="rz"><span class="rn" aria-hidden="true">05</span><h3 class="cb">High performance score</h3><p>We keep your score high and fight unfair marks with disputes.</p></li>
+      <li class="rz"><span class="rn" aria-hidden="true">06</span><h3 class="cb">Weekly numbers</h3><p>Gross, rate per mile and deadhead for every truck, every week.</p></li>
+      <li class="rz"><span class="rn" aria-hidden="true">07</span><h3 class="cb">Years of experience</h3><p>Dispatchers who know the lanes, the brokers and the paperwork.</p></li>
+      <li class="rz"><span class="rn" aria-hidden="true">08</span><h3 class="cb">2-week test, no long contract</h3><p>Start with 3–5 trucks. If the numbers aren't better, you walk.</p></li>
+      <li class="rz"><span class="rn" aria-hidden="true">09</span><h3 class="cb">One manager, straight answers</h3><p>One person who knows your company, so you never chase a team for an answer.</p></li>
+      <li class="rz"><span class="rn" aria-hidden="true">10</span><h3 class="cb">24/7 dispatch team</h3><p>Dispatchers on every shift, day and night.</p></li>
+      <li class="rz"><span class="rn" aria-hidden="true">11</span><h3 class="cb">Every piece of paperwork</h3><p>Carrier packets, rate cons, BOLs and PODs, handled.</p></li>
+      <li class="rz"><span class="rn" aria-hidden="true">12</span><h3 class="cb">Safety, mechanics and accounting</h3><p>Add these teams whenever you need them.</p></li>
+    </ol>
+    <div class="norc reveal" id="norc">
+      <div class="xb">No rate cuts.<br><span>Ever.</span></div>
+      <div>
+        <p>Some dispatchers quietly cut the rate before the driver sees it. We never do it, not on you and not on your drivers. Every rate con is the real one.</p>
+        <span class="stop">If your company cuts rates, don't call us.</span>
       </div>
-      <div class="field">
-        <div class="top"><label for="gross">Gross per truck, per week</label><output id="oGross">$8,000</output></div>
-        <input type="range" id="gross" min="3000" max="20000" step="250" value="8000">
-      </div>
-      <div class="res">
-        <div><span class="k">Dispatch fee / week</span><span class="v" id="rFee">$3,600</span></div>
-        <div><span class="k">Per truck / week</span><span class="v" id="rPer">$240</span></div>
-        <div class="save"><span class="k">Dispatch fee / month</span><span class="v" id="rMonth">$15,600</span></div>
-      </div>
-      <p class="note">Estimate only. 4% of gross; the monthly figure uses 52 weeks ÷ 12. Your manager and the full dispatch team are included.</p>
     </div>
+    <p class="pricing-note"><b>Pricing:</b> a simple percentage of gross, set by your fleet size. Your manager gives you the exact number on the first call, and there's no long contract.</p>
   </div>
   <div class="wrap">
     <div class="addons">
@@ -779,8 +748,9 @@ footer .fcontact a:hover{text-decoration:underline;text-underline-offset:3px;}
     </div>
     <div class="faq" id="faqList">
       <div class="qa open"><button type="button" aria-expanded="true"><span>Do I have to sign a long contract?</span><i aria-hidden="true"></i></button><div class="a"><div><p>No. Start with a two-week test on 3–5 trucks. If the numbers aren't better, you walk. We're confident you'll stay.</p></div></div></div>
-      <div class="qa"><button type="button" aria-expanded="false"><span>What does the 4% cover?</span><i aria-hidden="true"></i></button><div class="a"><div><p>Dispatching, your assigned manager, broker setup and paperwork, tracking and check calls. The fee is 4% of the gross your trucks earn while we dispatch them.</p></div></div></div>
-      <div class="qa"><button type="button" aria-expanded="false"><span>Do you handle performance disputes?</span><i aria-hidden="true"></i></button><div class="a"><div><p>Yes. We watch your on-time record and file disputes when a load is marked late or rejected unfairly, so one bad load doesn't hurt your score.</p></div></div></div>
+      <div class="qa"><button type="button" aria-expanded="false"><span>What does it cost?</span><i aria-hidden="true"></i></button><div class="a"><div><p>A simple percentage of the gross your trucks earn while we dispatch them, set by your fleet size. Your manager gives you the exact number on the first call. It covers dispatching, your manager, broker setup and paperwork, tracking and check calls.</p></div></div></div>
+      <div class="qa"><button type="button" aria-expanded="false"><span>Can you keep our performance score high?</span><i aria-hidden="true"></i></button><div class="a"><div><p>Yes. We keep loads on time, stay on every check call, and file disputes when a load is marked late or rejected unfairly, so one bad load doesn't drag your score down.</p></div></div></div>
+      <div class="qa"><button type="button" aria-expanded="false"><span>Do you cut rates?</span><i aria-hidden="true"></i></button><div class="a"><div><p>No. Every rate con is the real one, for you and for your drivers. If your company cuts rates, we're not the dispatcher for you.</p></div></div></div>
       <div class="qa"><button type="button" aria-expanded="false"><span>What equipment do you dispatch?</span><i aria-hidden="true"></i></button><div class="a"><div><p>Power only, 53' dry van and reefer.</p></div></div></div>
       <div class="qa"><button type="button" aria-expanded="false"><span>Who do I talk to?</span><i aria-hidden="true"></i></button><div class="a"><div><p>Your manager: one person who knows your trucks, your drivers and your goals, reachable any hour. You don't have to chase the whole team for an answer.</p></div></div></div>
       <div class="qa"><button type="button" aria-expanded="false"><span>How big is your team?</span><i aria-hidden="true"></i></button><div class="a"><div><p>Big enough to give every carrier we work with high-quality service around the clock, with one manager who knows your company.</p></div></div></div>
@@ -805,7 +775,7 @@ footer .fcontact a:hover{text-decoration:underline;text-underline-offset:3px;}
         <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
         Call (628) 333-3103</a>
     </div>
-    <div class="meta mono"><span>One manager per company</span><span>Full dispatch team</span><span>24/7</span><span>4% of gross</span></div>
+    <div class="meta mono"><span>One manager per company</span><span>Full dispatch team</span><span>24/7</span><span>No rate cuts</span></div>
   </div>
 </section>
 </main>
@@ -988,7 +958,7 @@ $$('.split, .reveal, #big3, #finalH').forEach(el => io.observe(el));
 
 /* ---------- dispatch board ---------- */
 const board = $('#services'), rowsEl = $$('#rows .rowi'), wvids = $$('#scr video'), rail = $$('#rail i');
-const CHIPS = ['Rates we fight for', 'Straight from brokers', 'Every piece of paper', 'All night long', 'Performance · disputes · more'];
+const CHIPS = ['Rates we fight for', 'Straight from brokers', 'Every piece of paper', 'All night long', 'High score · disputes · more'];
 const FX = ['zoom', 'whip', 'slice', 'whipUp', 'zoom'];
 let active = 0;
 wvids.forEach((v, i) => { v.dataset.wide = v.dataset.src; });
@@ -1038,20 +1008,21 @@ rowsEl.forEach((r, k) => r.addEventListener('click', () => {
   scrollTo({top: top + span * ((k + .5) / 5), behavior: 'smooth'});
 }));
 
-/* ---------- calculator ---------- */
-const money = n => '$' + Math.round(n).toLocaleString('en-US');
-function calc(){
-  const t = +$('#trucks').value, g = +$('#gross').value;
-  $('#oTrucks').textContent = t; $('#oGross').textContent = money(g);
-  $('#trucks').style.setProperty('--p', ((t-1)/(60-1)*100) + '%');
-  $('#gross').style.setProperty('--p', ((g-3000)/(20000-3000)*100) + '%');
-  const wk = t * g;
-  const fee = wk * .04;
-  $('#rFee').textContent = money(fee); $('#rPer').textContent = money(g * .04);
-  $('#rMonth').textContent = money(fee * 52 / 12);
-}
-['#trucks', '#gross'].forEach(s => $(s).addEventListener('input', calc));
-calc();
+/* ---------- reasons: each card drops in as it reaches the screen ---------- */
+const rzIO = new IntersectionObserver(ents => {
+  let k = 0;
+  ents.forEach(e => {
+    if (!e.isIntersecting) return;
+    rzIO.unobserve(e.target);
+    if (RM) return;
+    e.target.animate([
+      {transform:'translateY(-80px) scale(1.12)', opacity:0},
+      {transform:'translateY(6px) scale(.985)', opacity:1, offset:.7},
+      {transform:'none', opacity:1}
+    ], {duration: 520, delay: (k++) * 110, easing:'cubic-bezier(.2,.9,.25,1)', fill:'backwards'});
+  });
+}, {rootMargin: '0px 0px 12% 0px', threshold: 0});
+$$('.rz').forEach(li => rzIO.observe(li));
 
 /* ---------- FAQ ---------- */
 $$('#faqList .qa button').forEach(b => b.addEventListener('click', () => {
